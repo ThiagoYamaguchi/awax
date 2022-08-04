@@ -55,6 +55,20 @@ header {
    border-bottom: 5px solid #b28756;
 }
 
+/* ----------------- Button ----------------- */
+.btn {
+   display: inline-block;
+   background-color: #b28756;
+   color: #ffffff;
+   text-transform: uppercase;
+   font-size: 12px;
+   font-weight: 600;
+   text-decoration: none;
+   padding: 10px 30px;
+   margin-top: 20px;
+   border-radius: 20px;
+}
+
 /* ----------------- Banner ----------------- */
 .banner {
    height: calc(100vh - 100px);
@@ -92,18 +106,6 @@ header {
 .banner h2 {
    text-transform: uppercase;
    margin-top: 20px;
-}
-.banner a {
-   display: block;
-   background-color: #b28756;
-   color: #ffffff;
-   text-transform: uppercase;
-   font-size: 12px;
-   font-weight: 600;
-   text-decoration: none;
-   padding: 10px 30px;
-   margin-top: 20px;
-   border-radius: 20px;
 }
 .banner .sliders-pointers {
    width: 100vw;
@@ -147,21 +149,117 @@ header {
 }
 .default .section-body {
    max-width: 1140px;
-   min-height: 100px;
    margin: auto;
-   background-color: #ccc;
 }
 .default.light {
    background-color: #f7f7f7;
 }
-.default.light .section-title {
+.default.light .section-title,
+.default.light .section-body {
    color: #000000;
 }
-
 .default.dark {
    background-color: #000000;
 }
-.default.dark .section-title {
+.default.dark .section-title,
+.default.dark .section-body  {
    color: #ffffff;
 }
 
+
+/* ----------------- CSS de areas especificas ----------------- */
+
+/* ----------------- Seção About Us ----------------- */
+.section-aboutus {
+   display: flex;
+}
+.section-aboutus--left {
+   flex: 1;
+}
+.section-aboutus--left p {
+   font-size: 14px;
+   line-height: 25px;
+}
+.section-aboutus--right {
+   width: 500px;
+   text-align: center;
+}
+.section-aboutus--right img {
+   width: 480px;
+   box-shadow: 0 5px 10px #333333;
+}
+
+/* ----------------- Seção Services ----------------- */
+.section-services {
+   display: flex;
+}
+.section-services--content {
+   flex: 1;
+   text-align: center;
+   padding: 15px;
+   border-right: 1px solid #333333;
+}
+.section-services--content:first-child {
+   border-left: 1px solid #333333;
+}
+.section-services--content img {
+   max-width: 50px;
+   height: 50px;
+}
+.section-services--content h4 {
+   margin-top: 20px;
+   text-transform: uppercase;
+   font-size: 18px;
+}
+.section-services--content p {
+   margin-top: 10px;
+   font-size: 13px;
+   color: #999999;
+}
+
+/* ----------------- Seção Our Projects ----------------- */
+.section-projects {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.section-projects--filters {
+   border: 1px solid #cccccc;
+   background-color: #eeeeee;
+   border-radius: 30px;
+   display: inline-block;
+   padding: 0 20px;
+}
+.section-projects--filters ul,
+.section-projects--filters li {
+   list-style: none;
+}
+.section-projects--filters li {
+   display: inline-block;
+   padding: 10px;
+   text-transform: uppercase;
+   font-size: 13px;
+   border-left: 1px solid #cccccc;
+   border-bottom: 3px solid transparent;
+   color: #555555;
+   cursor: pointer;
+}
+.section-projects--filters li:hover,
+.section-projects--filters li.active {
+   border-bottom: 3px solid #b28756;
+} 
+.section-projects--filters li:first-child {
+   border-left: none;
+}
+.section-projects--photos {
+   width: 100vw;
+   max-width: 1140px;
+   margin-top: 20px;
+   background-color: gray;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.section-projects--photo {
+   width: 280px;
+}
